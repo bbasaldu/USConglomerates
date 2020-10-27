@@ -143,7 +143,7 @@ d3.csv('ConglomeratesV2.csv').then(function(data){
             .attr('pointer-events', 'none')
             .text(d => {
                 var obj = links.find(elem => elem.source.name == d.name)
-                if(typeof obj != 'undefined') return '($'+ d3.format(',')(+obj.revenue)+' million)'
+                if(typeof obj != 'undefined') return '$'+ d3.format(',')(+obj.revenue)+' million'
                 else return ''
             })
     
